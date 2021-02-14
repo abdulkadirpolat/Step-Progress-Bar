@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+ Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  z-index: -1;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+}
+
+.container .step-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: auto;
+}
+
+.container .step-body .steps-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  width: 95%;
+  height: none;
+}
+
+.container .step-body .steps-header .progress {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  width: 0%;
+  height: 10%;
+  top: 50%;
+  left: 0;
+  background-color: #6d6dec;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.container .step-body .steps-header::before {
+  content: '';
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 50%;
+  left: 0;
+  background-color: #dadadb;
+}
+
+.container .step-body .steps-header .steps {
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  border-radius: 50%;
+  border: 4px solid #dadadb;
+  background-color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container .step-body .steps-header .steps {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container .step-body .steps-header .steps {
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .step-body .steps-header .steps {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    border: 3px solid #dadadb;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container .step-body .steps-header .steps {
+    width: 20px;
+    height: 20px;
+    font-size: 7px;
+    border: 2px solid #dadadb;
+  }
+}
+
+.container .step-body .steps-header .action {
+  border-color: #6d6dec;
+}
+
+.container .step-body .buttons {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+  .container .step-body .buttons {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .step-body .buttons {
+    margin-top: 20px;
+  }
+}
+
+.container .step-body .buttons .btn {
+  margin: 8px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 0px 3px #5555f7;
+          box-shadow: 0px 0px 3px #5555f7;
+  padding: 0.35rem 1.2rem;
+  background-color: #0bd3d3;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container .step-body .buttons .btn {
+    font-size: 16px;
+    padding: 0.3rem 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container .step-body .buttons .btn {
+    font-size: 13px;
+    padding: 0.25rem 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .step-body .buttons .btn {
+    font-size: 10px;
+    padding: 0.2rem 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container .step-body .buttons .btn {
+    font-size: 7px;
+    padding: 0.12rem 0.45rem;
+    border-radius: 3px;
+  }
+}
+
+.container .step-body .buttons .btn:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+.container .step-body .buttons .btn:focus {
+  outline: none;
+}
+
+.container .step-body .buttons .btn:disabled {
+  background-color: #dadadb;
+  cursor: not-allowed;
+}
+ 
