@@ -1,2 +1,2 @@
 # Step-Progress-Bar
-İleri ve geri adım programı
+İleri ve geri adım projesi
